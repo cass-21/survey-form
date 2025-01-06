@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <div class="header-text">
+          <h1 id="title">Workplace Performance Survey </h1>
+          <p id="description">
+            We value your feedback! Please take the time to fill out the form
+            below to help us improve our workplace.
+          </p>
+        </div>
+      </header>
+      <div class="form-container">
+        <form class="survey-form" id="survey-form">
+          <label id="name-label" for="name">Name</label>
+          <input
+            class="label-placeholder"
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label id="email-label" for="email">Email</label>
+          <input
+            class="label-placeholder"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label id="number-label" for="number">Age</label>
+          <input
+            class="label-placeholder"
+            id="number"
+            type="number"
+            min="13"
+            max="120"
+            placeholder="Age"
+            required
+          />
+
+          <label class="dropdown-label" for="dropdown"
+            >What is your primary work role?</label
+          >
+          <select class="dropdown-items" id="dropdown" required>
+            <option value="">Select an option</option>
+            <option value="frontend">Frontend Development</option>
+            <option value="backend">Backend Development</option>
+            <option value="fullstack">Full Stack Development</option>
+          </select>
+
+          <fieldset class="skills-container">
+            <legend class="skill">
+              How do you rate your software development skills?
+            </legend>
+            <div class="radio-group">
+              <label class="inline">
+                <input
+                  class="skill-rating-button"
+                  type="radio"
+                  name="rating"
+                  value="beginner"
+                  required
+                />
+                Beginner
+              </label>
+              <label class="inline">
+                <input
+                  class="skill-rating-button"
+                  type="radio"
+                  name="rating"
+                  value="intermediate"
+                />
+                Intermediate
+              </label>
+              <label class="inline">
+                <input
+                  class="skill-rating-button"
+                  type="radio"
+                  name="rating"
+                  value="advanced"
+                />
+                Advanced
+              </label>
+            </div>
+          </fieldset>
+          
+          
+
+          <fieldset class="checkbox-container">
+            <legend class="checkbox-container-label">
+              What languages do you mainly work with? (Check all that apply)
+            </legend>
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="html"
+              />
+              HTML</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="css"
+              />
+              CSS</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="javascript"
+              />
+              JavaScript</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="python"
+              />
+              Python</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="swift"
+              />
+              Swift</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="rust"
+              />
+              Rust</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="php"
+              />
+              PHP</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="languages"
+                value="kotlin"
+              />
+              Kotlin</label
+            >
+          </fieldset>
+          <fieldset class="appreciation-container">
+            <legend>
+              Have you ever felt your work was not appreciated or overlooked?
+            </legend>
+            <div class="radio-group">
+              <label class="radio-inline">
+                <input
+                  class="appreciation-radio-button"
+                  type="radio"
+                  name="appreciation"
+                  value="yes"
+                />
+                Yes
+              </label>
+              <label class="radio-inline">
+                <input
+                  class="appreciation-radio-button"
+                  type="radio"
+                  name="appreciation"
+                  value="no"
+                />
+                No
+              </label>
+              <label class="radio-inline">
+                <input
+                  class="appreciation-radio-button"
+                  type="radio"
+                  name="appreciation"
+                  value="not-sure"
+                />
+                Not Sure
+              </label>
+            </div>
+          </fieldset>
+          <label for="favorite-part"
+            >What's your favorite part about being a software developer?</label
+          >
+          <select id="favorite-part" required>
+            <option value="">Select an option</option>
+            <option value="problem-solving">
+              Problem Solving & Critical Thinking
+            </option>
+            <option value="creating">Creating Something from Scratch</option>
+            <option value="learning">Continuous Learning & Growth</option>
+            <option value="collaboration">
+              Collaborating with Other Developers
+            </option>
+            <option value="impact">Making an Impact Through Technology</option>
+          </select>
+          <fieldset id="workplace-changes-container">
+            <legend class="checkbox-container-label">
+              What changes would you like to see in the workplace?
+            </legend>
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="flexible-hours"
+              />
+              Flexible hours</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="remote-work"
+              />
+              Remote work choices</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="mentorship"
+              />
+              More mentorship programs</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="training"
+              />
+              Career training availability</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="communication"
+              />
+              Better communication skills </label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="collaboration"
+              />
+              Enhanced team collaboration</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="work-life"
+              />
+              Work-life balance initiatives</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="compensation"
+              />
+              More competitive compensation</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="benefits"
+              />
+              Improved health benefits</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="recognition"
+              />
+              Better achievement recognition</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="diversity"
+              />
+              More diversity and inclusion</label
+            >
+            <label class="checkbox-labels"
+              ><input
+                class="checkbox"
+                type="checkbox"
+                name="workplace-changes"
+                value="tech-stack"
+              />
+              Updated technology stack</label
+            >
+          </fieldset>
+
+          <label for="comments">Any additional comments?</label>
+          <textarea
+            id="comments"
+            rows="4"
+            placeholder="Share your thoughts..."
+          ></textarea>
+
+          <div class="button">
+            <button id="submit" type="submit">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
